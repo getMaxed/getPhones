@@ -10,6 +10,7 @@ import {Provider} from 'react-redux'
 
 import Layout from 'containers/layout'
 import Phones from 'containers/phones'
+import Phone from 'containers/phone'
 
 import reducers from 'reducers'
 // import Provider from "react-redux/src/components/Provider";
@@ -26,6 +27,7 @@ ReactDOM.render(
             <Route component={Layout}>
                 <Route path="/" component={Phones} />
             </Route>
+            <Route path='/phones/:id' component={Phone} />
         </Router>
     </Provider>,
     document.getElementById('root')
